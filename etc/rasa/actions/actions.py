@@ -10,10 +10,10 @@ from rasa_sdk.events import SlotSet
 
 class ActionGetUserAge(Action):
 
-     def name(self) -> Text:
-            return "action_userage"
+    def name(self) -> Text:
+        return "action_userage"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         age=tracker.get_slot("userage")
         
@@ -26,10 +26,10 @@ class ActionGetUserAge(Action):
         
 class ActionGetUserBirthPlace(Action):
 
-     def name(self) -> Text:
+    def name(self) -> Text:
             return "action_birthplace"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         birthplace=tracker.get_slot("birthplace")
         west_kz=["Атырау","Актау","Актобе","Жанаозен","Уральск"]
@@ -51,14 +51,12 @@ class ActionGetUserBirthPlace(Action):
         else:
             dispatcher.utter_message("К сожалению не знаю такой город.Расскажите о вашем городе?")
 
-       
-
 class ActionTellTale(Action):
 
-     def name(self) -> Text:
-            return "action_tale"
+    def name(self) -> Text:
+        return "action_tale"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #query = "Русские сказки"
         #my_results_list = []
         #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 2,pause = 2.0):
@@ -71,10 +69,10 @@ class ActionTellTale(Action):
     
 class ActionFilmRecommendation(Action):
 
-     def name(self) -> Text:
-            return "action_film"
+    def name(self) -> Text:
+        return "action_film"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #filmgenre=tracker.get_slot("filmgenre")
         #query="Фильмы жанра "+filmgenre
         #my_results_list = []
@@ -87,10 +85,10 @@ class ActionFilmRecommendation(Action):
         
 class ActionBookRecommendation(Action):
 
-     def name(self) -> Text:
-            return "action_book"
+    def name(self) -> Text:
+        return "action_book"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #bookgenre=tracker.get_slot("bookgenre")
         #query="Книги про "+bookgenre
         #my_results_list = []
@@ -103,10 +101,10 @@ class ActionBookRecommendation(Action):
         
 class ActionTranslate(Action):
 
-     def name(self) -> Text:
-            return "action_translate"
+    def name(self) -> Text:
+        return "action_translate"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #text=tracker.latest_message.get('text')
         #translator = Translator()
             
@@ -114,13 +112,12 @@ class ActionTranslate(Action):
        
         dispatcher.utter_message("translate.google.com")
         
-       
 class ActionFoodRecommandation(Action):
 
-     def name(self) -> Text:
-            return "action_cooking"
+    def name(self) -> Text:
+        return "action_cooking"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #query=tracker.get_slot("cooking")
         #my_results_list = []
         #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 2,pause = 2.0):
@@ -131,10 +128,10 @@ class ActionFoodRecommandation(Action):
         
 class ActionNotFound(Action):
 
-     def name(self) -> Text:
-            return "action_fallback"
+    def name(self) -> Text:
+        return "action_fallback"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #query=tracker.latest_message.get('text')
         #my_results_list = []
         #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
@@ -145,10 +142,10 @@ class ActionNotFound(Action):
                 
 class ActionUserLovelyFood(Action):
 
-     def name(self) -> Text:
-            return "action_userlovelyfood"
+    def name(self) -> Text:
+        return "action_userlovelyfood"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #text=tracker.get_slot("user_lovely_food")
         #query="Интересные факты про "+text
         #my_results_list = []
@@ -161,10 +158,10 @@ class ActionUserLovelyFood(Action):
         
 class ActionUserLovelyFood(Action):
 
-     def name(self) -> Text:
-            return "action_userlovelysport"
+    def name(self) -> Text:
+        return "action_userlovelysport"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #text=tracker.get_slot("user_lovely_food")
         #query="Интересные факты про "+text
         #my_results_list = []
@@ -178,16 +175,16 @@ class ActionUserLovelyFood(Action):
                 
 class ActionUserBirthDate(Action):
 
-     def name(self) -> Text:
-            return "action_userbirthdate"
+    def name(self) -> Text:
+        return "action_userbirthdate"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            dispatcher.utter_message("Hello World!")
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("Hello World!")
             
 class ActionMusicRecommendation(Action):
 
     def name(self) -> Text:
-            return "action_music"
+        return "action_music"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #text=tracker.get_slot("musicgenre")
