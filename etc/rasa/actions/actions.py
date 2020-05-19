@@ -75,13 +75,14 @@ class ActionFilmRecommendation(Action):
             return "action_film"
 
      def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        filmgenre=tracker.get_slot("filmgenre")
-        query="Фильмы жанра "+filmgenre
-        my_results_list = []
-        for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-            my_results_list.append(i)
-        for i in my_results_list[:3]:
-            dispatcher.utter_message(i)
+        #filmgenre=tracker.get_slot("filmgenre")
+        #query="Фильмы жанра "+filmgenre
+        #my_results_list = []
+        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
+        #    my_results_list.append(i)
+        #for i in my_results_list[:3]:
+        #    dispatcher.utter_message(i)
+        dispatcher.utter_message("Hello World!")
         
         
 class ActionBookRecommendation(Action):
@@ -185,10 +186,10 @@ class ActionUserBirthDate(Action):
             
 class ActionMusicRecommendation(Action):
 
-     def name(self) -> Text:
+    def name(self) -> Text:
             return "action_music"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #text=tracker.get_slot("musicgenre")
         #query="Музыка "+text
         #my_results_list = []
@@ -201,10 +202,10 @@ class ActionMusicRecommendation(Action):
                 
 class ActionGetUserName(Action):
 
-     def name(self) -> Text:
-            return "action_username"
+    def name(self) -> Text:
+        return "action_username"
 
-     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         #name=tracker.latest_message.get('text')
         #dispatcher.utter_message("Как ваши дела "+name+" ?")
