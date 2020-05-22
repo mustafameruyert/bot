@@ -1,0 +1,86 @@
+{
+  "filmgenre": {
+    "precision": 0.9666666666666667,
+    "recall": 0.9354838709677419,
+    "f1-score": 0.9508196721311476,
+    "support": 31
+  },
+  "cooking": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 47
+  },
+  "user_lovely_food": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "userage": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "user_birthdate": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24
+  },
+  "bookgenre": {
+    "precision": 0.9354838709677419,
+    "recall": 0.9666666666666667,
+    "f1-score": 0.9508196721311476,
+    "support": 30
+  },
+  "musicgenre": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10
+  },
+  "language": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "tale": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "user_lovely_sport": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "birthplace": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 21
+  },
+  "micro avg": {
+    "precision": 0.9836065573770492,
+    "recall": 0.9836065573770492,
+    "f1-score": 0.9836065573770492,
+    "support": 183
+  },
+  "macro avg": {
+    "precision": 0.9911045943304008,
+    "recall": 0.9911045943304008,
+    "f1-score": 0.9910581222056632,
+    "support": 183
+  },
+  "weighted avg": {
+    "precision": 0.9837769551677537,
+    "recall": 0.9836065573770492,
+    "f1-score": 0.9836065573770492,
+    "support": 183
+  }
+}

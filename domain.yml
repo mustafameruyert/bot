@@ -122,6 +122,7 @@ intents:
 - user_asks_what_to_cook
 - music_genre
 - username
+- names
 entities:
 - location
 - username

@@ -1,0 +1,62 @@
+[
+  {
+    "text": "фантастика",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "фантастика",
+        "entity": "bookgenre"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "filmgenre",
+        "start": 0,
+        "end": 10,
+        "extractor": "DIETClassifier",
+        "value": "фантастика"
+      }
+    ]
+  },
+  {
+    "text": "детектив",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "детектив",
+        "entity": "filmgenre"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bookgenre",
+        "start": 0,
+        "end": 8,
+        "extractor": "DIETClassifier",
+        "value": "детектив"
+      }
+    ]
+  },
+  {
+    "text": "приключения",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "приключения",
+        "entity": "filmgenre"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bookgenre",
+        "start": 0,
+        "end": 11,
+        "extractor": "DIETClassifier",
+        "value": "приключения"
+      }
+    ]
+  }
+]

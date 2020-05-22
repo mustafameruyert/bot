@@ -1,0 +1,122 @@
+[
+  {
+    "text": "фантастика",
+    "intent": "book_genre",
+    "intent_prediction": {
+      "name": "film_genre",
+      "confidence": 0.5465728640556335
+    }
+  },
+  {
+    "text": "детектив",
+    "intent": "film_genre",
+    "intent_prediction": {
+      "name": "book_genre",
+      "confidence": 0.5226210951805115
+    }
+  },
+  {
+    "text": "приключения",
+    "intent": "film_genre",
+    "intent_prediction": {
+      "name": "book_genre",
+      "confidence": 0.7784526944160461
+    }
+  },
+  {
+    "text": "что ты можешь предложить",
+    "intent": "give_example",
+    "intent_prediction": {
+      "name": "user_asks_what_can_do",
+      "confidence": 0.3686928451061249
+    }
+  },
+  {
+    "text": "Да",
+    "intent": "right",
+    "intent_prediction": {
+      "name": "yes",
+      "confidence": 0.646405816078186
+    }
+  },
+  {
+    "text": "не помню",
+    "intent": "user_answer",
+    "intent_prediction": {
+      "name": "bot_asks_what_do_you_read",
+      "confidence": 0.5465466976165771
+    }
+  },
+  {
+    "text": "у меня все хорошо",
+    "intent": "user_asks_translate",
+    "intent_prediction": {
+      "name": "user_good",
+      "confidence": 0.5285479426383972
+    }
+  },
+  {
+    "text": "что делаешь?",
+    "intent": "user_asks_what_are_you_doing",
+    "intent_prediction": {
+      "name": "what_do_you_do",
+      "confidence": 0.5128232836723328
+    }
+  },
+  {
+    "text": "Я тут",
+    "intent": "user_back",
+    "intent_prediction": {
+      "name": "user_here",
+      "confidence": 0.5385433435440063
+    }
+  },
+  {
+    "text": "Тут",
+    "intent": "user_back",
+    "intent_prediction": {
+      "name": "user_here",
+      "confidence": 0.5256417989730835
+    }
+  },
+  {
+    "text": "Я здесь",
+    "intent": "user_here",
+    "intent_prediction": {
+      "name": "user_back",
+      "confidence": 0.5331923365592957
+    }
+  },
+  {
+    "text": "Здесь",
+    "intent": "user_here",
+    "intent_prediction": {
+      "name": "user_back",
+      "confidence": 0.5778206586837769
+    }
+  },
+  {
+    "text": "Снова здесь",
+    "intent": "user_here",
+    "intent_prediction": {
+      "name": "user_back",
+      "confidence": 0.6317497491836548
+    }
+  },
+  {
+    "text": "Я люблю футбол)",
+    "intent": "user_hobby",
+    "intent_prediction": {
+      "name": "bot_asks_sports",
+      "confidence": 0.5292292237281799
+    }
+  },
+  {
+    "text": "А вы чем занимаетесь в свободное время?",
+    "intent": "user_hobby",
+    "intent_prediction": {
+      "name": "user_asks_hobby",
+      "confidence": 0.49565839767456055
+    }
+  }
+]
