@@ -3,7 +3,6 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-#from googlesearch import search
 from setup_qa import question_answering_pipeline, search_article, extract_text, final_text
 
 
@@ -58,11 +57,6 @@ class ActionTellTale(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         query = "Русские сказки"
-        my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 2,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
         dispatcher.utter_message(question_answering_pipeline(query))
      
         
@@ -76,11 +70,6 @@ class ActionFilmRecommendation(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         filmgenre=tracker.get_slot("filmgenre")
         query="Фильмы жанра "+filmgenre
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
         dispatcher.utter_message(question_answering_pipeline(query))
         
         
@@ -92,11 +81,6 @@ class ActionBookRecommendation(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         bookgenre=tracker.get_slot("bookgenre")
         query="Книги про "+bookgenre
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 2,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
         dispatcher.utter_message(question_answering_pipeline(query))
         
         
@@ -107,9 +91,6 @@ class ActionTranslate(Action):
         return "action_translate"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        #text=tracker.latest_message.get('text')
-        #translator = Translator()
-        #tr_word=translator.translate(text, dest='en').text
         dispatcher.utter_message("translate.google.com")
         
 class ActionFoodRecommandation(Action):
@@ -119,11 +100,6 @@ class ActionFoodRecommandation(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         query=tracker.get_slot("cooking")
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 2,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
         dispatcher.utter_message(question_answering_pipeline(query))
      
         
@@ -135,11 +111,7 @@ class ActionNotFound(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         query=tracker.latest_message.get('text')
         dispatcher.utter_message(question_answering_pipeline(query))
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
+        
         
         
                 
@@ -152,12 +124,7 @@ class ActionUserLovelyFood(Action):
         text=tracker.get_slot("user_lovely_food")
         query="Интересные факты про "+text
         dispatcher.utter_message(question_answering_pipeline(query))
-        #my_results_list = []
-        #for i in search(query,tld = 'com', lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-        #   my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
-  
+        
         
         
 class ActionUserLovelyFood(Action):
@@ -169,11 +136,6 @@ class ActionUserLovelyFood(Action):
         text=tracker.get_slot("user_lovely_food")
         query="Интересные факты про "+text
         dispatcher.utter_message(question_answering_pipeline(query))
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-        #    my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
         
         
    
@@ -220,12 +182,7 @@ class ActionMusicRecommendation(Action):
         text=tracker.get_slot("musicgenre")
         query="Музыка "+text
         dispatcher.utter_message(question_answering_pipeline(query))
-        #my_results_list = []
-        #for i in search(query,tld = 'com',lang = 'ru',num = 5,start = 0,stop = 5,pause = 2.0):
-        #   my_results_list.append(i)
-        #for i in my_results_list[:3]:
-        #    dispatcher.utter_message(i)
-     
+        
 
                 
 class ActionGetUserName(Action):
